@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #1e1e1e;
+}
+
+.hero-font {
+  font-family: "Montserrat Alternates", sans-serif;
+}
+
+.hero-text {
+  @apply font-extrabold text-5xl md:text-7xl 2xl:text-8xl;
+}
+
+.download-btn {
+  @apply bg-[#498F1C] px-5 py-3 2xl:px-10 2xl:py-4 flex items-center justify-center md:justify-start rounded-xl 2xl:rounded-3xl;
+}
+
+.bottom-shadow {
+  box-shadow: 0px 11px 0px 0px #00000038;
+}
+
+@media (max-width: 768px) {
+  .bottom-shadow {
+    box-shadow: 0px 5px 0px 0px #00000038;
+  }
+}
+
+.vertical-gradient {
+  background: linear-gradient(180deg, #68b934 0%, #a8d034 100%);
+}
+
+.u-shaped,
+.u-shaped-stats,
+.u-shaped-contact,
+.u-shaped-features {
+  position: relative;
+}
+
+.u-shaped::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px; /* Adjust height of curve */
+  background-color: #68b934;
+  border-radius: 50%;
+}
+
+.u-shaped::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 25px; /* Adjust height of curve */
+  background-color: #a8d034;
+}
+
+.u-shaped-stats::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px; /* Adjust height of curve */
+  background-color: #a8d034;
+  border-radius: 50%;
+}
+
+.u-shaped-stats::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 25px; /* Adjust height of curve */
+  background-color: white;
+}
+
+.u-shaped-features::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px; /* Adjust height of curve */
+  background-color: #68b934;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.u-shaped-features::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 25px; /* Adjust height of curve */
+  background-color: white;
+}
+
+.u-shaped-contact::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px; /* Adjust height of curve */
+  background-color: #f0f8eb;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.u-shaped-contact::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 25px; /* Adjust height of curve */
+  background-color: white;
+}
+
+#cta {
+  background-image: url("../../public/mesh-gradient.svg");
+}
+
+@media (min-width: 768px) {
+  .cta-about {
+    background-image: url("../../public/mask-group.png");
+  }
+}
+
+@media (max-width: 768px) {
+  .horizontal-slide {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  .horizontal-slide > div {
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+    margin-right: 30px; /* Adjust this to match your gap-8 spacing */
+  }
+  .horizontal-slide::-webkit-scrollbar {
+    display: none;
+  }
+}
+/* 
+.horizontal-slide-img {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 20px;
+}
+.horizontal-slide-img > div {
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+    margin-right: 30px;
+}
+.horizontal-slide-img::-webkit-scrollbar {
+    height: 8px;
+}
+.horizontal-slide-img::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.horizontal-slide-img::-webkit-scrollbar-thumb {
+    background: #ff7b28;
+    border-radius: 50px;
+}
+
+.horizontal-slide-img::-webkit-scrollbar-thumb:hover {
+    background: #ff7b28;
+    border-radius: 50px;
+} */
+
+.horizontal-slide-img {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 20px;
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #ff7b28 #f1f1f1; /* For Firefox */
+}
+
+.horizontal-slide-img > div {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  margin-right: 30px; /* Adjust this to match your gap-8 spacing */
+}
+
+/* Webkit browsers (Chrome, Safari) custom scrollbar */
+.horizontal-slide-img::-webkit-scrollbar {
+  height: 8px; /* Adjust scrollbar height */
+}
+
+.horizontal-slide-img::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.horizontal-slide-img::-webkit-scrollbar-thumb {
+  background: #ff7b28;
+  border-radius: 50px;
+}
+
+.horizontal-slide-img::-webkit-scrollbar-thumb:hover {
+  background: #ff7b28;
+}
+
+/* Make sure to disable default scrollbars on other browsers */
+.horizontal-slide-img {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #ff7b28 #f1f1f1; /* Firefox */
+}
