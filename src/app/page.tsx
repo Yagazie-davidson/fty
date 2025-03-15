@@ -5,7 +5,6 @@ import Hero from "@app/components/Hero";
 import MoreFeatures from "@app/components/MoreFeatures";
 import Stats from "@app/components/Stats";
 import Testimonials from "@app/components/Testimonials";
-import Image from "next/image";
 
 export default function Home() {
   return (
